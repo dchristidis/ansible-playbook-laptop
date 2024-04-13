@@ -1,1 +1,2 @@
-- hosts: all
+- name: Configure Lenovo ThinkPad T495s
+  hosts: all
