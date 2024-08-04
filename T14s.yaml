@@ -1,1 +1,1 @@
-- hosts: all
+- hosts: localhost
