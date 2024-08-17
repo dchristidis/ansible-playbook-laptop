@@ -1,7 +1,5 @@
 - name: Configure Lenovo ThinkPad T14s Gen 4
   hosts: localhost
 
-  tasks:
-  - name: Configure hostname
-    ansible.builtin.hostname:
-      name: T14s
+  roles:
+  - hostname
