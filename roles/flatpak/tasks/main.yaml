@@ -1,3 +1,10 @@
+- name: Check installed applications from the Fedora repository
+  ansible.builtin.shell:
+    cmd: >-
+      flatpak list --system --app --columns origin,application
+      | awk 'NR > 1 && $1 == "{{ _flatpak_fedora_remote_name }}" { print $2 }'
+  register: _flatpak_fedora_apps_installed
+
 - name: Add Flathub repository
   community.general.flatpak_remote:
     name: '{{ _flatpak_flathub_name }}'
