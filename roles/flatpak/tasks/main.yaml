@@ -3,7 +3,7 @@
     cmd: >-
       set -o pipefail;
       flatpak list --system --app --columns origin,application
-      | awk 'NR > 1 && $1 == "{{ _flatpak_fedora_remote_name }}" { print $2 }'
+      | awk '$1 == "{{ _flatpak_fedora_remote_name }}" { print $2 }'
   register: _flatpak_fedora_apps_installed
   check_mode: false
   changed_when: false
