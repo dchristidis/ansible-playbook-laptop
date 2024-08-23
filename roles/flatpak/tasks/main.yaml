@@ -8,6 +8,11 @@
   check_mode: false
   changed_when: false
 
+- name: Uninstall applications from the Fedora repository
+  community.general.flatpak:
+    name: '{{ _flatpak_fedora_apps_installed.stdout_lines }}'
+    state: absent
+
 - name: Add Flathub repository
   community.general.flatpak_remote:
     name: '{{ _flatpak_flathub_name }}'
