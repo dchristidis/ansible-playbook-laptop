@@ -13,7 +13,7 @@
     name: '{{ _flatpak_fedora_apps_installed.stdout_lines }}'
     state: absent
 
-- name: Add Flathub repository
+- name: Add the Flathub repository
   community.general.flatpak_remote:
-    name: '{{ _flatpak_flathub_name }}'
-    flatpakrepo_url: '{{ _flatpak_flathub_url }}'
+    name: '{{ _flatpak_flathub_remote_name }}'
+    flatpakrepo_url: '{{ _flatpak_flathub_remote_url }}'
