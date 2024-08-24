@@ -1,3 +1,17 @@
 - name: Install Firefox
   community.general.flatpak:
     name: '{{ _firefox_app_id }}'
+
+- name: Check the runtime branch
+  ansible.builtin.shell:
+    cmd: >-
+      set -o pipefail;
+      flatpak list --system --app --columns application,runtime
+      | awk '$1 == "{{ _firefox_app_id }}" { split($2, a, "/"); print a[3] }'
+  register: _firefox_ffmpeg_runtime_branch
+  check_mode: false
+  changed_when: false
+
+- name: Install the FFmpeg runtime extension
+  community.general.flatpak:
+    name: '{{ _firefox_ffmpeg_runtime_id }}//{{ _firefox_ffmpeg_runtime_branch.stdout }}'
