@@ -13,5 +13,9 @@
   changed_when: false
 
 - name: Install the FFmpeg runtime extension
-  community.general.flatpak:
-    name: '{{ _firefox_ffmpeg_runtime_id }}//{{ _firefox_ffmpeg_runtime_branch.stdout }}'
+  ansible.builtin.command:
+    cmd: >-
+      flatpak install --system --noninteractive flathub
+      '{{ _firefox_ffmpeg_runtime_id }}//{{ _firefox_ffmpeg_runtime_branch.stdout }}'
+  register: _firefox_ffmpeg_runtime_install
+  changed_when: '"Installation complete." in _firefox_ffmpeg_runtime_install.stdout'
