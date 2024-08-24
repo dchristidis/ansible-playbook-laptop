@@ -1,0 +1,3 @@
+- name: Install Firefox
+  community.general.flatpak:
+    name: '{{ _firefox_app_id }}'
