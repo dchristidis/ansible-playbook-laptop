@@ -19,3 +19,11 @@
       '{{ _firefox_ffmpeg_runtime_id }}//{{ _firefox_ffmpeg_runtime_branch.stdout }}'
   register: _firefox_ffmpeg_runtime_install
   changed_when: '"Installation complete." in _firefox_ffmpeg_runtime_install.stdout'
+
+- name: Create the configuration directories
+  ansible.builtin.file:
+    path: '{{ item }}'
+    state: directory
+  loop:
+  - '{{ _firefox_configuration_policies | ansible.builtin.dirname }}'
+  - '{{ _firefox_configuration_prefs | ansible.builtin.dirname }}'

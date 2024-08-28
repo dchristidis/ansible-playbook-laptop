@@ -1,2 +1,5 @@
 _firefox_app_id: org.mozilla.firefox
 _firefox_ffmpeg_runtime_id: org.freedesktop.Platform.ffmpeg-full
+_firefox_systemconfig_runtime_dir: '{{ ansible_user_dir }}/.local/share/flatpak/extension/org.mozilla.firefox.systemconfig/x86_64/stable'
+_firefox_configuration_policies: '{{ _firefox_systemconfig_runtime_dir }}/policies/policies.json'
+_firefox_configuration_prefs: '{{ _firefox_systemconfig_runtime_dir }}/defaults/pref/prefs.js'
