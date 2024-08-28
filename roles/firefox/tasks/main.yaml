@@ -27,3 +27,13 @@
   loop:
   - '{{ _firefox_configuration_policies | ansible.builtin.dirname }}'
   - '{{ _firefox_configuration_prefs | ansible.builtin.dirname }}'
+
+- name: Configure Firefox
+  ansible.builtin.copy:
+    src: '{{ item.src }}'
+    dest: '{{ item.dest }}'
+  loop:
+  - src: '{{ _firefox_configuration_policies | ansible.builtin.basename }}'
+    dest: '{{ _firefox_configuration_policies }}'
+  - src: '{{ _firefox_configuration_prefs | ansible.builtin.basename }}'
+    dest: '{{ _firefox_configuration_prefs }}'
