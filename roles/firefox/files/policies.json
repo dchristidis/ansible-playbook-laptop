@@ -7,7 +7,10 @@
             "browser.urlbar.suggest.searches": false,
             "browser.urlbar.suggest.recentsearches": false,
             "browser.urlbar.suggest.topsites": false,
-            "browser.urlbar.suggest.engines": false
-        }
+            "browser.urlbar.suggest.engines": false,
+            "browser.discovery.enabled": false,
+            "dom.private-attribution.submission.enabled": false
+        },
+        "DisableFirefoxStudies": true
     }
 }
