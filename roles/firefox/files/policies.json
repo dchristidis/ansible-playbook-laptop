@@ -2,7 +2,12 @@
     "policies": {
         "Preferences": {
             "browser.newtabpage.activity-stream.showSearch": false,
-            "browser.newtabpage.activity-stream.feeds.topsites": false
+            "browser.newtabpage.activity-stream.feeds.topsites": false,
+            "browser.search.suggest.enabled": false,
+            "browser.urlbar.suggest.searches": false,
+            "browser.urlbar.suggest.recentsearches": false,
+            "browser.urlbar.suggest.topsites": false,
+            "browser.urlbar.suggest.engines": false
         }
     }
 }
