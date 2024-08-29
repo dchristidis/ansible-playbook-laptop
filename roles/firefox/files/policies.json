@@ -1,3 +1,8 @@
 {
-    "policies": {}
+    "policies": {
+        "Preferences": {
+            "browser.newtabpage.activity-stream.showSearch": false,
+            "browser.newtabpage.activity-stream.feeds.topsites": false
+        }
+    }
 }
