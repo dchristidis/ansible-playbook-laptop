@@ -9,7 +9,8 @@
             "browser.urlbar.suggest.topsites": false,
             "browser.urlbar.suggest.engines": false,
             "browser.discovery.enabled": false,
-            "dom.private-attribution.submission.enabled": false
+            "dom.private-attribution.submission.enabled": false,
+            "media.ffmpeg.vaapi.enabled": true
         },
         "DisableFirefoxStudies": true,
         "ExtensionSettings": {
