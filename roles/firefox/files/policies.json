@@ -10,7 +10,8 @@
             "browser.urlbar.suggest.engines": false,
             "browser.discovery.enabled": false,
             "dom.private-attribution.submission.enabled": false,
-            "media.ffmpeg.vaapi.enabled": true
+            "media.ffmpeg.vaapi.enabled": true,
+            "ui.key.menuAccessKeyFocuses": false
         },
         "DisableFirefoxStudies": true,
         "ExtensionSettings": {
