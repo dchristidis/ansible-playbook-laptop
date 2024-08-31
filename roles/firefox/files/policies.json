@@ -1,6 +1,7 @@
 {
     "policies": {
         "Preferences": {
+            "media.videocontrols.picture-in-picture.video-toggle.enabled": false,
             "browser.newtabpage.activity-stream.showSearch": false,
             "browser.newtabpage.activity-stream.feeds.topsites": false,
             "browser.search.suggest.enabled": false,
