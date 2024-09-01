@@ -1,6 +1,7 @@
 - name: Install Firefox
   community.general.flatpak:
     name: '{{ _firefox_app_id }}'
+    state: present
 
 - name: Check the runtime branch
   ansible.builtin.shell:
