@@ -6,7 +6,7 @@
   ansible.builtin.shell:
     cmd: >-
       set -o pipefail;
-      flatpak list --system --app --columns application,runtime
+      flatpak list --system --app --columns=application,runtime
       | awk '$1 == "{{ _firefox_app_id }}" { split($2, a, "/"); print a[3] }'
   register: _firefox_ffmpeg_runtime_branch
   check_mode: false
