@@ -24,9 +24,11 @@
 - name: Create the configuration directory
   ansible.builtin.file:
     path: '{{ _firefox_configuration_policies | ansible.builtin.dirname }}'
+    mode: '0755'
     state: directory
 
 - name: Configure Firefox
   ansible.builtin.copy:
     src: '{{ _firefox_configuration_policies | ansible.builtin.basename }}'
     dest: '{{ _firefox_configuration_policies }}'
+    mode: '0644'
